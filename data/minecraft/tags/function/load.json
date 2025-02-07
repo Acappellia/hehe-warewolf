@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "hw:private/init",
+        "bs.position:__load__"
+    ]
+}
