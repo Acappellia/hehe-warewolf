@@ -1,0 +1,1 @@
+execute as @e[type=item_display,tag=prophet_seat,distance=..10] if score @s hw.seat_no = @p[distance=..1] hw.player_id run ride @p[distance=..1] mount @s

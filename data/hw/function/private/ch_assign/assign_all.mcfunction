@@ -16,11 +16,11 @@ title @a times 5 40 10
 execute as @a run playsound minecraft:block.bell.resonate player @s ~ ~ ~ 1 1
 
 #give basic tools
-give @a[gamemode=!spectator] stone_sword
-give @a[gamemode=!spectator] stone_axe
-give @a[gamemode=!spectator] stone_pickaxe
-give @a[gamemode=!spectator] stone_shovel
-give @a[gamemode=!spectator] bread[item_name='"船员口粮"'] 3
+item replace entity @a[gamemode=!spectator] hotbar.0 with stone_sword
+item replace entity @a[gamemode=!spectator] hotbar.1 with stone_axe
+item replace entity @a[gamemode=!spectator] hotbar.2 with stone_pickaxe
+item replace entity @a[gamemode=!spectator] hotbar.3 with stone_shovel
+item replace entity @a[gamemode=!spectator] hotbar.4 with bread[item_name='"船员口粮"'] 3
 
 #assign char
 execute as @a[tag=have_bp,sort=random,gamemode=!adventure] run function hw:private/ch_assign/assign_bp
@@ -32,4 +32,12 @@ tag @a remove no_god_please_no
 tag @a remove no_civilian
 tag @a remove have_bp
 
+#give player number
+scoreboard players set #current_player_id hw 1
+execute as @a[sort=random] run function hw:private/ch_assign/give_number
+
+#tell warewolves
+tellraw @a[tag=warewolf] [{"text": "[","color": "dark_gray"},{"text": "方块狼人杀","color": "gray"},{"text": "] ","color": "dark_gray"},{"text": "你的队友是： ","color": "white"},{"selector": "@a[tag=warewolf]","bold": true,"color": "red","separator": " "}]
+
+#change game status
 scoreboard players set #game_status hw 1
