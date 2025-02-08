@@ -1,5 +1,4 @@
-#TODO "start" title
-#TODO start sound
+execute as @a at @s run playsound item.goat_horn.sound.3 player @s ~ ~ ~ 1 1
 
 #remove tags
 tag @a remove no_warewolf
@@ -12,9 +11,9 @@ tellraw @a [{"text": "[","color": "dark_gray"},{"text": "方块狼人杀","color
 #set status
 scoreboard players set #game_status hw 2
 
-scoreboard players set #day_counter hw 500
-bossbar set day_counter max 500
-bossbar set day_counter value 500
+scoreboard players set #day_counter hw 300
+bossbar set day_counter max 300
+bossbar set day_counter value 300
 bossbar set day_counter name "- 白天 - 剩余 5:00"
 
 bossbar set day_counter visible true
@@ -68,3 +67,16 @@ data modify storage hw:players names.9 set from block 0 -64 0 Items[{Slot:9b}].c
 data modify storage hw:players names.10 set from block 0 -64 0 Items[{Slot:10b}].components."minecraft:profile".name
 data modify storage hw:players names.11 set from block 0 -64 0 Items[{Slot:11b}].components."minecraft:profile".name
 data modify storage hw:players names.12 set from block 0 -64 0 Items[{Slot:12b}].components."minecraft:profile".name
+
+
+#random prophet quest
+
+execute store result score #prophet_quest hw run random value 1..8
+execute if score #prophet_quest hw matches 1 run tellraw @a[tag=prophet,gamemode=!spectator] [{"text": "[","color": "dark_gray"},{"text": "方块狼人杀","color": "gray"},{"text": "] ","color": "dark_gray"},{"text": "水晶球为你指引了方向： ","color": "white"},{"text": "收集 5 个铁锭","color": "yellow","bold": true}]
+execute if score #prophet_quest hw matches 2 run tellraw @a[tag=prophet,gamemode=!spectator] [{"text": "[","color": "dark_gray"},{"text": "方块狼人杀","color": "gray"},{"text": "] ","color": "dark_gray"},{"text": "水晶球为你指引了方向： ","color": "white"},{"text": "收集 16 个云杉原木","color": "yellow","bold": true}]
+execute if score #prophet_quest hw matches 3 run tellraw @a[tag=prophet,gamemode=!spectator] [{"text": "[","color": "dark_gray"},{"text": "方块狼人杀","color": "gray"},{"text": "] ","color": "dark_gray"},{"text": "水晶球为你指引了方向： ","color": "white"},{"text": "收集 1 个绿宝石","color": "yellow","bold": true}]
+execute if score #prophet_quest hw matches 4 run tellraw @a[tag=prophet,gamemode=!spectator] [{"text": "[","color": "dark_gray"},{"text": "方块狼人杀","color": "gray"},{"text": "] ","color": "dark_gray"},{"text": "水晶球为你指引了方向： ","color": "white"},{"text": "收集 3 个熟鲑鱼","color": "yellow","bold": true}]
+execute if score #prophet_quest hw matches 5 run tellraw @a[tag=prophet,gamemode=!spectator] [{"text": "[","color": "dark_gray"},{"text": "方块狼人杀","color": "gray"},{"text": "] ","color": "dark_gray"},{"text": "水晶球为你指引了方向： ","color": "white"},{"text": "收集 32 个圆石","color": "yellow","bold": true}]
+execute if score #prophet_quest hw matches 6 run tellraw @a[tag=prophet,gamemode=!spectator] [{"text": "[","color": "dark_gray"},{"text": "方块狼人杀","color": "gray"},{"text": "] ","color": "dark_gray"},{"text": "水晶球为你指引了方向： ","color": "white"},{"text": "收集 8 个煤炭","color": "yellow","bold": true}]
+execute if score #prophet_quest hw matches 7 run tellraw @a[tag=prophet,gamemode=!spectator] [{"text": "[","color": "dark_gray"},{"text": "方块狼人杀","color": "gray"},{"text": "] ","color": "dark_gray"},{"text": "水晶球为你指引了方向： ","color": "white"},{"text": "收集 10 个青金石","color": "yellow","bold": true}]
+execute if score #prophet_quest hw matches 8 run tellraw @a[tag=prophet,gamemode=!spectator] [{"text": "[","color": "dark_gray"},{"text": "方块狼人杀","color": "gray"},{"text": "] ","color": "dark_gray"},{"text": "水晶球为你指引了方向： ","color": "white"},{"text": "收集 3 个面包","color": "yellow","bold": true}]

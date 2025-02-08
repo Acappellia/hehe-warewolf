@@ -1,5 +1,4 @@
 #reset char data
-clear @a
 tag @a remove assigned
 tag @a remove hunter
 tag @a remove civilian
