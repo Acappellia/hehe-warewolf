@@ -1,0 +1,1 @@
+execute as @e[type=item_display,tag=hw_menu_center] at @s run function hw:private/menu/close_menu

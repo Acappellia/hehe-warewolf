@@ -11,11 +11,14 @@ execute as @a if score @s hw.player_vote_get = #max_vote hw run tag @s add voted
 scoreboard players reset #vote_out_players hw
 execute store result score #vote_out_players hw if entity @a[tag=voted_out]
 
+scoreboard players operation #vote_skip_counts hw += #vote_skip_counts hw
+execute if score #vote_skip_counts hw >= #warewolves_alive hw run scoreboard players set #vote_out_players hw 0
+
 title @a times 10 60 5
-execute if score #vote_out_players hw matches 1 run title @a[tag=warewolf] subtitle [{"text": "目标","color": "white"},{"selector": "@a[tag=voted_out]"}]
+execute if score #vote_out_players hw matches 1 run title @a[tag=warewolf] subtitle [{"text": "目标：","color": "white"},{"selector": "@a[tag=voted_out]"}]
 execute if score #vote_out_players hw matches 1 run title @a[tag=warewolf] title [{"text": "猎物确定，准备行动...","color": "red"}]
 
-execute if score #vote_out_players hw matches 2.. run title @a[tag=warewolf] title [{"text": "目标未定，暂不作行动","color": "gray"}]
+execute if score #vote_out_players hw matches 2.. run title @a[tag=warewolf] title [{"text": "目标不一致，无法行动","color": "gray"}]
 execute if score #vote_out_players hw matches 2.. run tag @a remove voted_out
 
 execute if score #vote_out_players hw matches 0 run title @a[tag=warewolf] title [{"text": "目标未定，暂不作行动","color": "gray"}]

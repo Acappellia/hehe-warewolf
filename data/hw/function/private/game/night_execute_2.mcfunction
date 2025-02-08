@@ -1,3 +1,5 @@
+function hw:private/menu/close_all_menu
+
 kill @a[tag=voted_out]
 
 scoreboard players reset @a hw.player_vote_get

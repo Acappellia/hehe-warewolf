@@ -1,0 +1,1 @@
+kill @a[gamemode=!spectator,tag=!warewolf]

@@ -11,5 +11,5 @@ title @a title [{"text": "投票时间","color": "blue"}]
 
 execute as @a at @s run playsound block.bell.use player @s ~ ~ ~
 
-
-#TODO open vote panel
+scoreboard players reset #vote_skip_counts hw
+execute as @a[gamemode=!spectator] at @s run function hw:private/menu/open_vote_menu

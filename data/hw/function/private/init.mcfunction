@@ -37,7 +37,7 @@ schedule function hw:private/slow_tick 20t append
 
 #init bossbar
 
-bossbar add day_counter "- 白天 - 剩余 3:00"
+bossbar add day_counter "- 白天 - 剩余 5:00"
 bossbar set day_counter color yellow
 bossbar set day_counter style progress
 execute if score #game_status hw matches 0..1 run bossbar set day_counter visible false

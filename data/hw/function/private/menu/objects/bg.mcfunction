@@ -1,0 +1,2 @@
+data merge entity @s {item:{id:"gray_concrete",count:1},Tags:["hw_menu","hw_menu_bg"],transformation:[110,0,0,0, 0,65,0,0, 0,0,1,3, 0,0,0,100],view_range:0.012}
+execute rotated as @n[type=item_display,tag=new_center,distance=..3] run tp @s ~ ~ ~ ~ ~
