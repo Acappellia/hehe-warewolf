@@ -27,6 +27,7 @@ execute unless score #current_seat_2 hw matches 0.. run scoreboard players set #
 scoreboard objectives add hw.seat_no dummy
 scoreboard objectives add hw.player_id dummy
 scoreboard objectives add hw.player_vote_get dummy
+scoreboard objectives add hw.player_die deathCount
 
 #force load
 forceload add 0 0 0 0
