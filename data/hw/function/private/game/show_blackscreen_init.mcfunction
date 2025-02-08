@@ -1,3 +1,3 @@
-title @s times 10t 30t 5t
-title @s subtitle "                      Zzz..."
-title @s title "\uea00"
+title @s times 10t 12t 10t
+title @s subtitle "\uea00"
+title @s title ""

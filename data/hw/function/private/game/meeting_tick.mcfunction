@@ -10,7 +10,7 @@ scoreboard players operation #timer_sec hw %= #60 hw
 execute store result storage hw:tmp timer.min int 1 run scoreboard players get #timer_min hw
 execute store result storage hw:tmp timer.sec int 1 run scoreboard players get #timer_sec hw
 
-function hw:private/game/daytime_update_timer with storage hw:tmp timer
+function hw:private/game/meeting_update_timer with storage hw:tmp timer
 
 #update timer
 scoreboard players remove #meeting_counter hw 1

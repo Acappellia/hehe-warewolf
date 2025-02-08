@@ -22,6 +22,7 @@ execute unless score #current_seat_2 hw matches 0.. run scoreboard players set #
 #5 game vote kill time
 #6 night time
 #7 night time execute
+#8 dawn
 #10 game ending time
 
 scoreboard objectives add hw.seat_no dummy
@@ -39,27 +40,23 @@ schedule function hw:private/slow_tick 20t append
 bossbar add day_counter "- 白天 - 剩余 3:00"
 bossbar set day_counter color yellow
 bossbar set day_counter style progress
-bossbar set day_counter max 180
-bossbar set day_counter value 180
-bossbar set day_counter visible false
+execute if score #game_status hw matches 0..1 run bossbar set day_counter visible false
 
 bossbar add meeting_counter "- 会议 - 剩余 3:00"
 bossbar set meeting_counter color blue
 bossbar set meeting_counter style progress
-bossbar set meeting_counter max 180
-bossbar set meeting_counter value 180
-bossbar set meeting_counter visible false
+execute if score #game_status hw matches 0..1 run bossbar set meeting_counter visible false
 
 bossbar add vote_indicator "- 投票 -"
 bossbar set vote_indicator color purple
 bossbar set vote_indicator style progress
 bossbar set vote_indicator max 180
 bossbar set vote_indicator value 0
-bossbar set vote_indicator visible false
+execute if score #game_status hw matches 0..1 run bossbar set vote_indicator visible false
 
 bossbar add night_indicator "- 夜晚 -"
 bossbar set night_indicator color red
 bossbar set night_indicator style progress
 bossbar set night_indicator max 180
 bossbar set night_indicator value 0
-bossbar set night_indicator visible false
+execute if score #game_status hw matches 0..1 run bossbar set night_indicator visible false

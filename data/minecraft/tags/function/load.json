@@ -1,7 +1,6 @@
 {
     "replace": false,
     "values": [
-        "hw:private/init",
-        "bs.position:__load__"
+        "hw:private/init"
     ]
 }

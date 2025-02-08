@@ -1,3 +1,5 @@
+scoreboard players set #game_status hw 8
+
 #give effect
 effect clear @a weakness
 effect clear @a darkness
@@ -7,4 +9,4 @@ execute as @a[gamemode=!spectator] at @s run execute as @e[type=marker,tag=loc_r
 kill @e[type=marker,tag=loc_record]
 
 #title
-schedule function hw:private/game/enter_daytime_2 30t replace
+schedule function hw:private/game/enter_daytime_2 20t replace

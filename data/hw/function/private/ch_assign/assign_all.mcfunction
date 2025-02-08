@@ -12,7 +12,7 @@ scoreboard players reset #god_counts hw
 scoreboard players reset #civilian_counts hw
 
 #effect
-title @a times 5 40 10
+title @a times 5 80 10
 execute as @a run playsound minecraft:block.bell.resonate player @s ~ ~ ~ 1 1
 
 #give basic tools
@@ -20,17 +20,11 @@ item replace entity @a[gamemode=!spectator] hotbar.0 with stone_sword
 item replace entity @a[gamemode=!spectator] hotbar.1 with stone_axe
 item replace entity @a[gamemode=!spectator] hotbar.2 with stone_pickaxe
 item replace entity @a[gamemode=!spectator] hotbar.3 with stone_shovel
-item replace entity @a[gamemode=!spectator] hotbar.4 with bread[item_name='"船员口粮"'] 3
+item replace entity @a[gamemode=!spectator] hotbar.4 with bread[item_name='"船员口粮"'] 6
 
 #assign char
 execute as @a[tag=have_bp,sort=random,gamemode=!adventure] run function hw:private/ch_assign/assign_bp
 execute as @a[tag=!assigned,sort=random,gamemode=!adventure] run function hw:private/ch_assign/assign_nobp
-
-#remove tags
-tag @a remove no_warewolf
-tag @a remove no_god_please_no
-tag @a remove no_civilian
-tag @a remove have_bp
 
 #give player number
 scoreboard players set #current_player_id hw 1

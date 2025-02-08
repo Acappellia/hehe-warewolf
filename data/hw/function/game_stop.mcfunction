@@ -23,7 +23,7 @@ tag @a remove voted
 scoreboard players reset #max_vote_player hw
 scoreboard players set #max_vote hw 0
 
-title @a times 0 20 0
+title @a times 0 60 0
 title @a title [{"text": "游戏中止","color": "gray"}]
 
 #effect

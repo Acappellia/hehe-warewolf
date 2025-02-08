@@ -1,5 +1,10 @@
 schedule function hw:private/slow_tick 20t replace
 
+bossbar set day_counter players @a
+bossbar set meeting_counter players @a
+bossbar set night_indicator players @a
+bossbar set vote_indicator players @a
+
 execute if score #game_pause hw matches 1 run return run function hw:private/game/pause_tick
 
 effect give @a night_vision infinite 0 true
