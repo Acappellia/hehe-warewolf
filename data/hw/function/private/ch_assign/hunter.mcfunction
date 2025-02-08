@@ -6,4 +6,4 @@ title @s title [{"text": "[ ","color": "dark_green"},{"text": "猎人","color": 
 tag @s add assigned
 scoreboard players add #god_counts hw 1
 
-#TODO give gun
+function hw:private/debug/give_gun

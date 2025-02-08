@@ -1,0 +1,18 @@
+{
+    "criteria": {
+        "gun_shot":{
+            "trigger": "minecraft:consume_item",
+            "conditions": {
+                "item": {
+                    "items": "wooden_hoe",
+                    "predicates": {
+                        "custom_data": "{hunter_gun:1b}"
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "hw:private/gun/gun_shot"
+    }
+}
