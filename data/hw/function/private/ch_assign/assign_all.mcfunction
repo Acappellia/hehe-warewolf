@@ -40,7 +40,7 @@ item replace entity @a[tag=warewolf,scores={hw.wolf_id=2}] hotbar.7 with amethys
 item replace entity @a[gamemode=!spectator] hotbar.8 with book[custom_data={hw_lookup:1b},enchantments={vanishing_curse:1},item_name='"character"',custom_name='[{"text": "查看角色","color": "white","bold": true}]',lore=['[{"text": "手持时提示自己的角色，以防你忘记了","color": "gray"}]']]
 
 #tell warewolves
-tellraw @a[tag=warewolf] [{"text": "[","color": "dark_gray"},{"text": "方块狼人杀","color": "gray"},{"text": "] ","color": "dark_gray"},{"text": "你的队友是： ","color": "white"},{"selector": "@a[tag=warewolf]","bold": true,"color": "red","separator": " "}]
+tellraw @a[tag=warewolf] [{"text": "[","color": "dark_gray"},{"text": "方块狼人杀","color": "gray"},{"text": "] ","color": "dark_gray"},{"text": "你的队伍： ","color": "white"},{"selector": "@a[tag=warewolf]","bold": true,"color": "red","separator": " "}]
 
 #change game status
 scoreboard players set #game_status hw 1
