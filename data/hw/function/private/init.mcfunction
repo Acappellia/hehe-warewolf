@@ -1,8 +1,12 @@
 gamerule commandBlockOutput false
-#gamerule sendCommandFeedback false
+gamerule sendCommandFeedback false
 gamerule keepInventory true
 gamerule doImmediateRespawn false
 gamerule showDeathMessages false
+gamerule doInsomnia false
+gamerule doMobSpawning false
+
+worldborder set 500
 
 scoreboard objectives add hw dummy
 scoreboard players set #60 hw 60
@@ -32,6 +36,12 @@ scoreboard objectives add hw.player_die deathCount
 
 #force load
 forceload add 0 0 0 0
+forceload add 2991 3195
+forceload add 2907 3307
+forceload add 3146 3011
+forceload add 2855 2875
+forceload add 2956 2942
+forceload add 2848 3177
 
 schedule function hw:private/slow_tick 20t append
 
