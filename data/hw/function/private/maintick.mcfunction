@@ -16,5 +16,4 @@ execute store result score #warewolves_alive hw if entity @a[gamemode=!spectator
 execute as @a[tag=lookup] run function hw:private/player/tell_prophet
 tag @a remove lookup
 
-
 execute as @a run function hw:private/player/show_char

@@ -14,6 +14,8 @@ bossbar set vote_indicator visible false
 #give effect
 effect give @a weakness infinite 9 true
 execute as @a run attribute @s block_interaction_range base set 0
+effect clear @a darkness
+effect clear @a invisibility
 
 execute as @a[gamemode=!spectator,tag=!warewolf] at @s run execute as @e[type=item_display,tag=night_seat] if score @s hw.seat_no = @p[distance=..1] hw.player_id run tp @p[distance=..1] @s
 execute as @a[gamemode=!spectator,tag=warewolf] at @s run execute as @e[type=item_display,tag=meeting_seat] if score @s hw.seat_no = @p[distance=..1] hw.wolf_id run tp @p[distance=..1] @s
