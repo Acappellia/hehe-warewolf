@@ -12,7 +12,6 @@ scoreboard objectives add hw dummy
 scoreboard players set #60 hw 60
 execute unless score #game_status hw matches 0.. run scoreboard players set #game_status hw 0
 
-
 execute unless score #current_seat hw matches 0.. run scoreboard players set #current_seat hw 0
 execute unless score #current_seat_2 hw matches 0.. run scoreboard players set #current_seat_2 hw 0
 
@@ -31,6 +30,7 @@ execute unless score #current_seat_2 hw matches 0.. run scoreboard players set #
 
 scoreboard objectives add hw.seat_no dummy
 scoreboard objectives add hw.player_id dummy
+scoreboard objectives add hw.wolf_id dummy
 scoreboard objectives add hw.player_vote_get dummy
 scoreboard objectives add hw.player_die deathCount
 
@@ -52,8 +52,8 @@ bossbar set day_counter color yellow
 bossbar set day_counter style progress
 execute if score #game_status hw matches 0..1 run bossbar set day_counter visible false
 
-bossbar add meeting_counter "- 会议 - 剩余 3:00"
-bossbar set meeting_counter color blue
+bossbar add meeting_counter "- 狼人会议 - 剩余 1:30"
+bossbar set meeting_counter color red
 bossbar set meeting_counter style progress
 execute if score #game_status hw matches 0..1 run bossbar set meeting_counter visible false
 

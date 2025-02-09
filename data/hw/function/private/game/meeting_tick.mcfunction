@@ -12,6 +12,8 @@ execute store result storage hw:tmp timer.sec int 1 run scoreboard players get #
 
 function hw:private/game/meeting_update_timer with storage hw:tmp timer
 
+execute if score #meeting_counter hw matches ..0 run return -1
+
 #update timer
 scoreboard players remove #meeting_counter hw 1
-execute if score #meeting_counter hw matches ..0 run function hw:private/game/enter_voting
+execute if score #meeting_counter hw matches ..0 run function hw:private/game/enter_dawn

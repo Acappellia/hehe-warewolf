@@ -6,7 +6,7 @@
                 "item": {
                     "items": "wooden_hoe",
                     "predicates": {
-                        "custom_data": "{hunter_gun:1b}"
+                        "custom_data": "{witch_gun:1b}"
                     }
                 }
             }

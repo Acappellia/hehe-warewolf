@@ -1,6 +1,6 @@
 #reset char data
 tag @a remove assigned
-tag @a remove hunter
+tag @a remove witch
 tag @a remove civilian
 tag @a remove prophet
 tag @a remove warewolf

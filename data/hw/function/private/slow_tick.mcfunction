@@ -13,6 +13,7 @@ execute if score #game_status hw matches 0..1 run effect give @a saturation 1 1 
 execute if score #game_status hw matches 2 run function hw:private/game/daytime_tick
 execute if score #game_status hw matches 3 run function hw:private/game/meeting_tick
 
-execute if score #game_status hw matches 4 unless entity @a[gamemode=!spectator,tag=!voted] run function hw:private/game/enter_vote_execute
+#execute if score #game_status hw matches 4 unless entity @a[gamemode=!spectator,tag=!voted] run function hw:private/game/enter_vote_execute
+#execute if score #game_status hw matches 6..7 run function hw:private/game/night_tick
 
-execute if score #game_status hw matches 6..7 run function hw:private/game/night_tick
+execute if score #game_status hw matches 3..7 as @a[tag=!warewolf,gamemode=!spectator] run function hw:private/game/show_blackscreen_loop

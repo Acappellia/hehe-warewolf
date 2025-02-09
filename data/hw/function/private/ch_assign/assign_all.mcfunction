@@ -2,7 +2,7 @@
 #remove exsisting char
 clear @a
 tag @a remove assigned
-tag @a remove hunter
+tag @a remove witch
 tag @a remove civilian
 tag @a remove prophet
 tag @a remove warewolf
@@ -28,7 +28,9 @@ execute as @a[tag=!assigned,sort=random,gamemode=!adventure] run function hw:pri
 
 #give player number
 scoreboard players set #current_player_id hw 1
-execute as @a[sort=random] run function hw:private/ch_assign/give_number
+scoreboard players set #current_wolf_id hw 1
+execute as @a[sort=random,gamemode=!adventure] run function hw:private/ch_assign/give_number
+execute as @a[sort=random,gamemode=!adventure,tag=warewolf] run function hw:private/ch_assign/give_wolf_number
 
 #tell warewolves
 tellraw @a[tag=warewolf] [{"text": "[","color": "dark_gray"},{"text": "方块狼人杀","color": "gray"},{"text": "] ","color": "dark_gray"},{"text": "你的队友是： ","color": "white"},{"selector": "@a[tag=warewolf]","bold": true,"color": "red","separator": " "}]
