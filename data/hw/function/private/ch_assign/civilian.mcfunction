@@ -6,4 +6,4 @@ title @s title [{"text": "[ ","color": "dark_gray"},{"text": "船员","color": "
 tag @s add assigned
 scoreboard players add #civilian_counts hw 1
 
-item replace entity @s hotbar.8 with wooden_hoe[enchantments={vanishing_curse:1},enchantment_glint_override=false,item_name='"【绝密】？？？"',lore=['[{"text": "手持时显示为你的职业道具","color": "gray","italic": true}]','[{"text": "无特殊道具则显示为普通的面包","color": "gray","italic": true}]'],attribute_modifiers={modifiers:[{id:"atk_speed",amount:0,operation:"add_value",type:"attack_speed"}],show_in_tooltip:false},item_model="minecraft:normal"]
+item replace entity @s hotbar.7 with wooden_hoe[enchantments={vanishing_curse:1},enchantment_glint_override=false,item_name='"【绝密】？？？"',lore=['[{"text": "手持时显示为你的职业道具","color": "gray","italic": true}]','[{"text": "无特殊道具则显示为普通的面包","color": "gray","italic": true}]'],attribute_modifiers={modifiers:[{id:"atk_speed",amount:0,operation:"add_value",type:"attack_speed"}],show_in_tooltip:false},item_model="minecraft:normal"]

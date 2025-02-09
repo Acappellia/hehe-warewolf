@@ -32,6 +32,13 @@ scoreboard players set #current_wolf_id hw 1
 execute as @a[sort=random,gamemode=!adventure] run function hw:private/ch_assign/give_number
 execute as @a[sort=random,gamemode=!adventure,tag=warewolf] run function hw:private/ch_assign/give_wolf_number
 
+#give warewolf item
+item replace entity @a[tag=warewolf,scores={hw.wolf_id=1}] hotbar.7 with amethyst_shard[custom_data={hw_darkness:1b},enchantments={vanishing_curse:1},item_model="ender_eye",consumable={animation:"none",consume_seconds:0.1,sound:"ui.toast.in",has_consume_particles:false},item_name='"darkness"',custom_name='[{"text": "月舞的序幕 ","color": "white","bold": true},{"text": "(右键)(消耗)","color": "gold","bold": true}]',lore=['[{"text": "致盲你的敌人30秒","color": "gray"}]']]
+item replace entity @a[tag=warewolf,scores={hw.wolf_id=2}] hotbar.7 with amethyst_shard[custom_data={hw_vanish:1b},enchantments={vanishing_curse:1},item_model="glass_bottle",consumable={animation:"none",consume_seconds:0.1,sound:"ui.toast.in",has_consume_particles:false},item_name='"vanish"',custom_name='[{"text": "夜晚的轻纱 ","color": "white","bold": true},{"text": "(右键)(消耗)","color": "gold","bold": true}]',lore=['[{"text": "隐形60秒","color": "gray"}]']]
+
+#give career loopup item
+item replace entity @a[gamemode=!spectator] hotbar.8 with book[custom_data={hw_lookup:1b},enchantments={vanishing_curse:1},item_name='"character"',custom_name='[{"text": "查看角色","color": "white","bold": true}]',lore=['[{"text": "手持时提示自己的角色，以防你忘记了","color": "gray"}]']]
+
 #tell warewolves
 tellraw @a[tag=warewolf] [{"text": "[","color": "dark_gray"},{"text": "方块狼人杀","color": "gray"},{"text": "] ","color": "dark_gray"},{"text": "你的队友是： ","color": "white"},{"selector": "@a[tag=warewolf]","bold": true,"color": "red","separator": " "}]
 

@@ -1,0 +1,18 @@
+{
+    "criteria": {
+        "vanish": {
+            "trigger": "consume_item",
+            "conditions": {
+                "item": {
+                    "items": "amethyst_shard",
+                    "predicates": {
+                        "custom_data": "{hw_vanish:1b}"
+                    }
+                }
+            }
+        }
+    },
+    "rewards":{
+        "function": "hw:private/player/vanish_skill"
+    }
+}
