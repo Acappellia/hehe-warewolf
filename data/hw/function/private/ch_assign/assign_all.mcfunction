@@ -22,6 +22,16 @@ execute as @a run playsound minecraft:block.bell.resonate player @s ~ ~ ~ 1 1
 #item replace entity @a[gamemode=!spectator] hotbar.3 with stone_shovel
 item replace entity @a[gamemode=!spectator] hotbar.0 with bread[item_name='"船员口粮"'] 6
 
+#random god list
+execute store result score #god_list hw run random value 1..6
+
+execute if score #god_list hw matches 1 run data modify storage hw:tmp god_list set value [1,2,3]
+execute if score #god_list hw matches 2 run data modify storage hw:tmp god_list set value [1,3,2]
+execute if score #god_list hw matches 3 run data modify storage hw:tmp god_list set value [2,1,3]
+execute if score #god_list hw matches 4 run data modify storage hw:tmp god_list set value [2,3,1]
+execute if score #god_list hw matches 5 run data modify storage hw:tmp god_list set value [3,1,2]
+execute if score #god_list hw matches 6 run data modify storage hw:tmp god_list set value [3,2,1]
+
 #assign char
 execute as @a[tag=have_bp,sort=random,gamemode=!adventure] run function hw:private/ch_assign/assign_bp
 execute as @a[tag=!assigned,sort=random,gamemode=!adventure] run function hw:private/ch_assign/assign_nobp
