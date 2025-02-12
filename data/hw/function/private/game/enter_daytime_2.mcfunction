@@ -37,3 +37,13 @@ execute as @a at @s run playsound block.bell.use player @s ~ ~ ~
 #place template hw:tree_2 2848 103 3177
 
 tag @a[tag=prophet] add can_lookup
+
+#refresh structure
+place template hw:s_1 -100 -2 197
+place template hw:s_2 -101 13 179
+place template hw:s_3 -9 19 -105
+place template hw:s_4 5 19 -100
+place template hw:s_5 188 22 75
+place template hw:s_6 -193 98 28
+
+tp @e[type=mutantmonsters:mutant_zombie] 61 27 -109

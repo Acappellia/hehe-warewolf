@@ -36,12 +36,13 @@ scoreboard objectives add hw.player_die deathCount
 
 #force load
 forceload add 0 0 0 0
-forceload add 2991 3195
-forceload add 2907 3307
-forceload add 3146 3011
-forceload add 2855 2875
-forceload add 2956 2942
-forceload add 2848 3177
+forceload add -100 197
+forceload add -101 179
+forceload add -9 -105
+forceload add 5 -100
+forceload add 188 75
+forceload add -193 28
+forceload add 16 -160 143 -33
 
 schedule function hw:private/slow_tick 20t append
 
