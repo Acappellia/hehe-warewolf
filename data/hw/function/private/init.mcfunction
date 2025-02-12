@@ -1,6 +1,6 @@
 gamerule commandBlockOutput false
 gamerule sendCommandFeedback false
-gamerule keepInventory true
+gamerule keepInventory false
 gamerule doImmediateRespawn false
 gamerule showDeathMessages false
 gamerule doInsomnia false
