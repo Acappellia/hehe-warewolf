@@ -9,7 +9,6 @@ gamerule doDaylightCycle false
 gamerule doWeatherCycle false
 time set 2000
 weather clear
-difficulty easy
 
 worldborder set 500
 

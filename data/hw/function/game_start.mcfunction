@@ -87,7 +87,6 @@ tellraw @a[tag=prophet] [{"text": "> 请使用 F3 + D 阅后即焚","color": "gr
 
 tag @a[tag=prophet] add can_lookup
 
-
 #structure & monster
 place template hw:s_1 -100 -2 197
 place template hw:s_2 -101 13 179
@@ -96,5 +95,15 @@ place template hw:s_4 5 19 -100
 place template hw:s_5 188 22 75
 place template hw:s_6 -193 98 28
 
-execute as @e[type=mutantmonsters:mutant_zombie] at @s run tp @s ~ -100 ~
+difficulty peaceful
+difficulty easy
+
+setblock 56 26 -120 air
+setblock 56 26 -120 trial_spawner{normal_config:{total_mobs:2,simultaneous_mobs:1,total_mobs_added_per_player:2,simultaneous_mobs_added_per_player:1,spawn_potentials:[{data:{entity:{id:"minecraft:vindicator",HandItems:[{id:"minecraft:wooden_sword",count:1},{}]}},weight:1}]}} replace
+setblock 73 26 -113 air
+setblock 73 26 -113 trial_spawner{normal_config:{total_mobs:1,simultaneous_mobs:1,total_mobs_added_per_player:1,simultaneous_mobs_added_per_player:1,spawn_potentials:[{data:{entity:{id:"minecraft:evoker"}},weight:1}]}} replace
+setblock 76 26 -96 air
+setblock 76 26 -96 trial_spawner{normal_config:{total_mobs:4,simultaneous_mobs:2,total_mobs_added_per_player:4,simultaneous_mobs_added_per_player:2,spawn_potentials:[{data:{entity:{id:"minecraft:bogged",HandItems:[{id:"minecraft:bow",count:1},{}]}},weight:1}]}} replace
+
+#execute as @e[type=mutantmonsters:mutant_zombie] at @s run tp @s ~ -100 ~
 summon mutantmonsters:mutant_zombie 61 27 -109 {PersistenceRequired:1b}
