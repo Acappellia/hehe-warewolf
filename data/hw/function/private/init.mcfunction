@@ -4,7 +4,12 @@ gamerule keepInventory true
 gamerule doImmediateRespawn false
 gamerule showDeathMessages false
 gamerule doInsomnia false
-gamerule doMobSpawning false
+gamerule doMobSpawning true
+gamerule doDaylightCycle false
+gamerule doWeatherCycle false
+time set 2000
+weather clear
+difficulty easy
 
 worldborder set 500
 
