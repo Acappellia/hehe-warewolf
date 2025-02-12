@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "#minecraft:stone_crafting_materials"
+  },
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:cobblestone",
+    "components": {
+      "item_model": "furnace",
+      "item_name": "\"无法使用的熔炉\""
+    }
+  }
+}

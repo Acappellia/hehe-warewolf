@@ -11,6 +11,8 @@ tellraw @a [{"text": "[","color": "dark_gray"},{"text": "方块狼人杀","color
 #set status
 scoreboard players set #game_status hw 2
 
+scoreboard players set #coal_required hw 16
+
 scoreboard players set #day_counter hw 300
 bossbar set day_counter max 300
 bossbar set day_counter value 300
@@ -23,6 +25,7 @@ bossbar set vote_indicator visible false
 
 #effect
 effect give @a instant_health 1 9 true
+effect clear @a resistance
 
 #set player heads
 
@@ -95,7 +98,6 @@ place template hw:s_4 5 19 -100
 place template hw:s_5 188 22 75
 place template hw:s_6 -193 98 28
 
-difficulty peaceful
 difficulty easy
 
 setblock 56 26 -120 air

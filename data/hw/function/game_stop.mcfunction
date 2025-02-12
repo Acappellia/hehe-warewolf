@@ -41,7 +41,9 @@ scoreboard players set #max_vote hw 0
 #title @a times 0 60 0
 #title @a title [{"text": "游戏中止","color": "gray"}]
 
-execute as @e[type=mutantmonsters:mutant_zombie] at @s run tp @s ~ -100 ~
+difficulty peaceful
+
+#execute as @e[type=mutantmonsters:mutant_zombie] at @s run tp @s ~ -100 ~
 
 #effect
 effect give @a instant_health 1 9 true

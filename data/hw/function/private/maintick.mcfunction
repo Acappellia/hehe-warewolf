@@ -17,3 +17,5 @@ execute as @a[tag=lookup] run function hw:private/player/tell_prophet
 tag @a remove lookup
 
 execute as @a run function hw:private/player/show_char
+
+execute if score #game_status hw matches 2 positioned -9 26 54 run function hw:private/coal/coal_tick
