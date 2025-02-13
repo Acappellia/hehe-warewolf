@@ -1,13 +1,12 @@
 gamerule commandBlockOutput false
 gamerule sendCommandFeedback false
-gamerule keepInventory false
+gamerule keepInventory true
 gamerule doImmediateRespawn false
 gamerule showDeathMessages false
 gamerule doInsomnia false
-gamerule doMobSpawning true
+gamerule doMobSpawning false
 gamerule doDaylightCycle false
 gamerule doWeatherCycle false
-time set 2000
 weather clear
 
 worldborder set 500
