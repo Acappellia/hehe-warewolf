@@ -8,9 +8,9 @@ execute if score #game_status hw matches 6..7 as @a[gamemode=!spectator,tag=prop
 execute store result score #players_alive hw if entity @a[gamemode=!spectator]
 execute store result score #warewolves_alive hw if entity @a[gamemode=!spectator,tag=warewolf]
 
-#TODO add victory
-execute unless score #game_status hw matches 0..1 if score #warewolves_alive hw matches ..0 run function hw:private/victory/civilian
-execute unless score #game_status hw matches 0..1 if score #warewolves_alive hw = #players_alive hw run function hw:private/victory/warewolves_kill
+#victory
+#execute unless score #game_status hw matches 0..1 if score #warewolves_alive hw matches ..0 run function hw:private/victory/civilian
+#execute unless score #game_status hw matches 0..1 if score #warewolves_alive hw = #players_alive hw run function hw:private/victory/warewolves_kill
 
 #show char
 execute as @a run function hw:private/player/show_char

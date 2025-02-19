@@ -1,5 +1,7 @@
 execute unless score #game_status hw matches 5 run return -1
 
+execute if score #warewolves_alive hw matches ..0 run return run function hw:private/victory/civilian
+
 title @a times 5 20 5
 title @a subtitle [{"text": "祝你今晚有个好梦……","color": "white"}]
 title @a title [{"text": "夜幕降临","color": "red"}]
