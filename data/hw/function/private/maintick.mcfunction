@@ -11,3 +11,6 @@ execute store result score #warewolves_alive hw if entity @a[gamemode=!spectator
 #TODO add victory
 execute unless score #game_status hw matches 0..1 if score #warewolves_alive hw matches ..0 run function hw:private/victory/civilian
 execute unless score #game_status hw matches 0..1 if score #warewolves_alive hw = #players_alive hw run function hw:private/victory/warewolves_kill
+
+#show char
+execute as @a run function hw:private/player/show_char

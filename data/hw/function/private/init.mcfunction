@@ -31,17 +31,12 @@ execute unless score #current_seat_2 hw matches 0.. run scoreboard players set #
 
 scoreboard objectives add hw.seat_no dummy
 scoreboard objectives add hw.player_id dummy
+scoreboard objectives add hw.wolf_id dummy
 scoreboard objectives add hw.player_vote_get dummy
 scoreboard objectives add hw.player_die deathCount
 
 #force load
-forceload add 0 0 0 0
-forceload add 2991 3195
-forceload add 2907 3307
-forceload add 3146 3011
-forceload add 2855 2875
-forceload add 2956 2942
-forceload add 2848 3177
+forceload add 0 0
 
 schedule function hw:private/slow_tick 20t append
 
