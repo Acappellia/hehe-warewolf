@@ -1,4 +1,5 @@
 #change status
+scoreboard players set #game_status hw 9
 
 scoreboard players set #morning_meeting_counter hw 60
 bossbar set morning_meeting_counter max 60

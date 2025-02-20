@@ -1,4 +1,4 @@
-scoreboard players set #game_status hw 9
+scoreboard players set #game_status hw 99
 
 #give effect
 effect clear @a weakness
