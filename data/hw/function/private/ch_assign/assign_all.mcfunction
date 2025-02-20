@@ -25,14 +25,14 @@ execute if score #god_list hw matches 1 run data modify storage hw:tmp god_list 
 execute if score #god_list hw matches 2 run data modify storage hw:tmp god_list set value [1,2]
 
 #assign char
-execute as @a[tag=have_bp,sort=random,gamemode=!adventure] run function hw:private/ch_assign/assign_bp
-execute as @a[tag=!assigned,sort=random,gamemode=!adventure] run function hw:private/ch_assign/assign_nobp
+execute as @a[tag=have_bp,sort=random,gamemode=!spectator] run function hw:private/ch_assign/assign_bp
+execute as @a[tag=!assigned,sort=random,gamemode=!spectator] run function hw:private/ch_assign/assign_nobp
 
 #give player number
 scoreboard players set #current_player_id hw 1
 scoreboard players set #current_wolf_id hw 1
-execute as @a[sort=random,gamemode=!adventure] run function hw:private/ch_assign/give_number
-execute as @a[sort=random,gamemode=!adventure,tag=warewolf] run function hw:private/ch_assign/give_wolf_number
+execute as @a[sort=random,gamemode=!spectator] run function hw:private/ch_assign/give_number
+execute as @a[sort=random,gamemode=!spectator,tag=warewolf] run function hw:private/ch_assign/give_wolf_number
 
 #give warewolf item
 item replace entity @a[tag=warewolf,scores={hw.wolf_id=1}] hotbar.6 with amethyst_shard[custom_data={hw_darkness:1b},enchantments={vanishing_curse:1},item_model="ender_eye",consumable={animation:"none",consume_seconds:0.1,sound:"ui.toast.in",has_consume_particles:false},item_name='"darkness"',custom_name='[{"text": "月舞的序幕 ","color": "white","bold": true},{"text": "(右键)(消耗)","color": "gold","bold": true}]',lore=['[{"text": "致盲所有敌人30秒","color": "gray"}]','[{"text": "仅可以在白天使用","color": "dark_gray"}]']]
