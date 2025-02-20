@@ -10,6 +10,8 @@ execute if score #game_pause hw matches 1 run return run function hw:private/gam
 
 execute if score #game_status hw matches 0..1 run effect give @a saturation 1 1 true
 
+execute if score #game_status hw matches 10 run function hw:private/game/first_day_tick
+execute if score #game_status hw matches 9 run function hw:private/game/morning_meeting_tick
 execute if score #game_status hw matches 2 run function hw:private/game/daytime_tick
 execute if score #game_status hw matches 3 run function hw:private/game/meeting_tick
 

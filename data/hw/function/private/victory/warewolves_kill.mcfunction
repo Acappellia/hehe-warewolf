@@ -4,6 +4,7 @@ tellraw @a [{"text": "[","color": "dark_gray"},{"text": "方块狼人杀","color
 scoreboard players set #game_status hw 0
 function hw:give_character/reset
 
+bossbar set morning_meeting_counter visible false
 bossbar set day_counter visible false
 bossbar set meeting_counter visible false
 bossbar set night_indicator visible false

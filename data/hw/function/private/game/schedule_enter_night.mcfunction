@@ -1,3 +1,6 @@
+#change status
+scoreboard players set #game_status hw 99
+
 execute unless score #game_status hw matches 5 run return -1
 
 execute if score #warewolves_alive hw matches ..0 run return run function hw:private/victory/civilian

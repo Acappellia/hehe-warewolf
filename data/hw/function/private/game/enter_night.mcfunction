@@ -1,3 +1,4 @@
+bossbar set morning_meeting_counter visible false
 bossbar set day_counter visible false
 bossbar set meeting_counter visible false
 bossbar set night_indicator visible true

@@ -9,17 +9,21 @@ tag @a remove have_bp
 tellraw @a [{"text": "[","color": "dark_gray"},{"text": "方块狼人杀","color": "gray"},{"text": "] ","color": "dark_gray"},{"text": "游戏开始！","color": "white"}]
 
 #set status
-scoreboard players set #game_status hw 2
+scoreboard players set #game_status hw 10
 
-scoreboard players set #day_counter hw 300
-bossbar set day_counter max 300
-bossbar set day_counter value 300
-bossbar set day_counter name "- 白天 - 剩余 5:00"
+scoreboard players set #day_counter hw 60
+bossbar set day_counter max 20
+bossbar set day_counter value 20
+bossbar set day_counter name "- 准备中 - 剩余 0:20"
 
+bossbar set morning_meeting_counter visible false
 bossbar set day_counter visible true
 bossbar set meeting_counter visible false
 bossbar set night_indicator visible false
 bossbar set vote_indicator visible false
+
+execute as @a[gamemode=!spectator] at @s run execute as @e[type=item_display,tag=meeting_seat] if score @s hw.seat_no = @p[distance=..1] hw.player_id run tp @p[distance=..1] @s
+execute as @a[gamemode=!spectator] at @s anchored eyes facing entity @n[type=item_display,tag=meeting_table] eyes run tp @s ~ ~ ~ ~ ~
 
 #effect
 effect give @a instant_health 1 9 true

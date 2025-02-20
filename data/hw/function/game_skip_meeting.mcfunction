@@ -1,1 +1,0 @@
-scoreboard players set #meeting_counter hw 1

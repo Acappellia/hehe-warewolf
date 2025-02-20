@@ -11,4 +11,4 @@ execute as @a[tag=prophet,gamemode=!spectator] run function hw:private/game/show
 scoreboard players operation #warewolves_alive hw += #warewolves_alive hw
 execute if score #warewolves_alive hw >= #players_alive hw run return run function hw:private/victory/warewolves_alt
 
-schedule function hw:private/game/enter_daytime 12t replace
+schedule function hw:private/game/enter_morning_meeting 12t replace

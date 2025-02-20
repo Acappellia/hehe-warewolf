@@ -20,6 +20,10 @@ execute unless score #current_seat_2 hw matches 0.. run scoreboard players set #
 
 #0 character unassigned
 #1 character assigned, game not start
+
+#10 game preparing time
+#99 dummy
+
 #2 game daytime
 #3 game meeting time
 #4 game vote time
@@ -27,7 +31,7 @@ execute unless score #current_seat_2 hw matches 0.. run scoreboard players set #
 #6 night time
 #7 night time execute
 #8 dawn
-#10 game ending time
+#9 morning meeting
 
 scoreboard objectives add hw.seat_no dummy
 scoreboard objectives add hw.player_id dummy
@@ -42,12 +46,17 @@ schedule function hw:private/slow_tick 20t append
 
 #init bossbar
 
-bossbar add day_counter "- 白天 - 剩余 5:00"
+bossbar add morning_meeting_counter "- 晨会 - 剩余 1:00"
+bossbar set morning_meeting_counter color green
+bossbar set morning_meeting_counter style progress
+execute if score #game_status hw matches 0..1 run bossbar set morning_meeting_counter visible false
+
+bossbar add day_counter "- 白天 - 剩余 2:00"
 bossbar set day_counter color yellow
 bossbar set day_counter style progress
 execute if score #game_status hw matches 0..1 run bossbar set day_counter visible false
 
-bossbar add meeting_counter "- 会议 - 剩余 3:00"
+bossbar add meeting_counter "- 晚会 - 剩余 5:00"
 bossbar set meeting_counter color blue
 bossbar set meeting_counter style progress
 execute if score #game_status hw matches 0..1 run bossbar set meeting_counter visible false

@@ -1,1 +1,0 @@
-scoreboard players set #day_counter hw 1
