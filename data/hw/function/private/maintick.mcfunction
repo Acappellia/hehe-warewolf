@@ -1,6 +1,6 @@
 execute as @a[scores={hw.player_die=1..}] run function hw:private/player/on_die
 
-execute if score #game_status hw matches 9..10 as @a[gamemode=!spectator] at @s run function hw:private/game/seat_tick_meeting
+execute if score #game_status hw matches 8..10 as @a[gamemode=!spectator] at @s run function hw:private/game/seat_tick_meeting
 execute if score #game_status hw matches 3..4 as @a[gamemode=!spectator] at @s run function hw:private/game/seat_tick_meeting
 execute if score #game_status hw matches 6..7 as @a[gamemode=!spectator,tag=!warewolf,tag=!prophet] at @s run function hw:private/game/seat_tick_night_civilian
 execute if score #game_status hw matches 6..7 as @a[gamemode=!spectator,tag=warewolf] at @s run function hw:private/game/seat_tick_night_warewolf

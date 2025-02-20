@@ -1,6 +1,8 @@
 schedule function hw:private/slow_tick 20t replace
 
 effect give @a night_vision infinite 0 true
+bossbar set lighthouse players @a
+bossbar set morning_meeting_counter players @a
 bossbar set day_counter players @a
 bossbar set meeting_counter players @a
 bossbar set night_indicator players @a
