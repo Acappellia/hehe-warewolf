@@ -16,7 +16,7 @@ title @a times 5 80 10
 execute as @a run playsound minecraft:block.bell.resonate player @s ~ ~ ~ 1 1
 
 #give basic tools
-item replace entity @a[gamemode=!spectator] hotbar.0 with stone_pickaxe[can_break={blocks:["iron_ore","coal_ore"]},unbreakable={}]
+item replace entity @a[gamemode=!spectator] hotbar.0 with stone_pickaxe[can_break={blocks:["iron_ore","coal_ore"]},unbreakable={show_in_tooltip:false},attribute_modifiers={show_in_tooltip:false,modifiers:[{type:"block_break_speed",amount:-0.9,id:"slow_dig",operation:"add_multiplied_base",slot:"mainhand"}]}]
 
 #random god list
 execute store result score #god_list hw run random value 1..2
