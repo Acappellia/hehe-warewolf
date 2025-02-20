@@ -19,7 +19,7 @@ bossbar set lighthouse visible true
 
 scoreboard players set #lighthouse_finished hw 0
 
-scoreboard players set #day_counter hw 60
+scoreboard players set #day_counter hw 20
 bossbar set day_counter max 20
 bossbar set day_counter value 20
 bossbar set day_counter name "- 准备中 - 剩余 0:20"
