@@ -1,9 +1,9 @@
 #change status
 
-scoreboard players set #day_counter hw 60
-bossbar set day_counter max 60
-bossbar set day_counter value 60
-bossbar set day_counter name "- 晨会 - 剩余 1:00"
+scoreboard players set #morning_meeting_counter hw 60
+bossbar set morning_meeting_counter max 60
+bossbar set morning_meeting_counter value 60
+bossbar set morning_meeting_counter name "- 晨会 - 剩余 1:00"
 
 bossbar set morning_meeting_counter visible true
 bossbar set day_counter visible false
