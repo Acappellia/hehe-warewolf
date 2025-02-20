@@ -11,6 +11,14 @@ tellraw @a [{"text": "[","color": "dark_gray"},{"text": "方块狼人杀","color
 #set status
 scoreboard players set #game_status hw 10
 
+scoreboard players set #lighthouse_progress hw 0
+bossbar set lighthouse max 32
+bossbar set lighthouse value 0
+bossbar set lighthouse name "灯塔修复中……"
+bossbar set lighthouse visible true
+
+scoreboard players set #lighthouse_finished hw 0
+
 scoreboard players set #day_counter hw 60
 bossbar set day_counter max 20
 bossbar set day_counter value 20

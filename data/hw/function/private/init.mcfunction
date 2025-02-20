@@ -46,6 +46,11 @@ schedule function hw:private/slow_tick 20t append
 
 #init bossbar
 
+bossbar add lighthouse "灯塔修复中……"
+bossbar set lighthouse color white
+bossbar set lighthouse style progress
+execute if score #game_status hw matches 0..1 run bossbar set lighthouse visible false
+
 bossbar add morning_meeting_counter "- 晨会 - 剩余 1:00"
 bossbar set morning_meeting_counter color green
 bossbar set morning_meeting_counter style progress

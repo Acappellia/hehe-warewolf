@@ -1,0 +1,16 @@
+{
+    "criteria": {
+        "click_icon": {
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "interaction",
+                    "nbt": "{Tags:[\"hw_lighthouse\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "hw:private/lighthouse/give_material"
+    }
+}

@@ -9,6 +9,7 @@ bossbar set day_counter visible false
 bossbar set meeting_counter visible false
 bossbar set night_indicator visible false
 bossbar set vote_indicator visible false
+bossbar set lighthouse visible false
 
 kill @e[type=marker,tag=loc_record]
 
