@@ -5,8 +5,7 @@ gamerule doImmediateRespawn false
 gamerule showDeathMessages false
 gamerule doInsomnia false
 gamerule doMobSpawning false
-
-worldborder set 500
+gamerule doWeatherCycle false
 
 scoreboard objectives add hw dummy
 scoreboard players set #60 hw 60

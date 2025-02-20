@@ -1,4 +1,4 @@
-#data merge entity @s {text:'"测试用title"',background:0,transformation:[-30,0,0,0, 0,30,0,0, 0,0,-30,0, 0,0,0,100],view_range:0.012,Tags:["hw_menu","hw_menu_title"]}
-execute if score #game_status hw matches 4 run data merge entity @s {text:'"右键点击玩家，投票出局"',background:0,transformation:[-30,0,0,0, 0,30,0,0, 0,0,-30,0, 0,0,0,100],view_range:0.012,Tags:["hw_menu","hw_menu_title"]}
-execute if score #game_status hw matches 6 run data merge entity @s {text:'"右键点击玩家，选择目标"',background:0,transformation:[-30,0,0,0, 0,30,0,0, 0,0,-30,0, 0,0,0,100],view_range:0.012,Tags:["hw_menu","hw_menu_title"]}
+#data merge entity @s {text:'"测试用title"',background:0,transformation:[-30,0,0,0, 0,30,0,0, 0,0,-30,0, 0,0,0,100],view_range:0.03,Tags:["hw_menu","hw_menu_title"]}
+execute if score #game_status hw matches 4 run data merge entity @s {text:'"右键点击玩家，投票出局"',background:0,transformation:[-30,0,0,0, 0,30,0,0, 0,0,-30,0, 0,0,0,100],view_range:0.03,Tags:["hw_menu","hw_menu_title"]}
+execute if score #game_status hw matches 6 run data merge entity @s {text:'"右键点击玩家，选择目标"',background:0,transformation:[-30,0,0,0, 0,30,0,0, 0,0,-30,0, 0,0,0,100],view_range:0.03,Tags:["hw_menu","hw_menu_title"]}
 execute rotated as @n[type=item_display,tag=new_center,distance=..3] run tp @s ~ ~ ~ ~ ~
