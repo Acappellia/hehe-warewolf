@@ -1,6 +1,6 @@
 advancement revoke @s only hw:give_material
 
-execute if score #lighthouse_finished hw matches 1.. run tellraw @s [{"text": "> ","color": "dark_gray"},{"text": "灯塔已经完成修复！","color": "gray"}]
+execute if score #lighthouse_finished hw matches 1.. run return run tellraw @s [{"text": "> ","color": "dark_gray"},{"text": "灯塔已经完成修复！","color": "gray"}]
 
 execute store result score #iron_ingot_count hw run clear @s iron_ingot
 execute if score #iron_ingot_count hw matches ..0 run return run tellraw @s [{"text": "> ","color": "dark_gray"},{"text": "收集","color": "gray"},{"text": " 铁锭 ","color": "white"},{"text": "并提交，修复灯塔！","color": "gray"}]
@@ -8,6 +8,7 @@ execute if score #iron_ingot_count hw matches ..0 run return run tellraw @s [{"t
 clear @s iron_ingot
 scoreboard players operation #lighthouse_progress hw += #iron_ingot_count hw
 execute store result bossbar lighthouse value run scoreboard players get #lighthouse_progress hw
+playsound item.armor.equip_chain player @a ~ ~ ~ 1 1
 
 execute if score #lighthouse_progress hw matches ..31 run return -1
 
