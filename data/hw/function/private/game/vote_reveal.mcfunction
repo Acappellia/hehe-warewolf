@@ -12,5 +12,5 @@ execute if score #vote_out_players hw matches 2.. run title @a subtitle [{"selec
 execute if score #vote_out_players hw matches 0 run title @a subtitle [{"text":"无人出局","color": "white"}]
 title @a title [{"text": "投票结果","color": "blue"}]
 
-execute if score #vote_out_players hw matches 1 run schedule function hw:private/game/vote_kill 40t replace
-execute unless score #vote_out_players hw matches 1 run schedule function hw:private/game/schedule_enter_night 60t replace
+execute if score #vote_out_players hw matches 1 run schedule function hw:private/game/vote_kill 80t replace
+execute unless score #vote_out_players hw matches 1 run schedule function hw:private/game/schedule_enter_night 80t replace
