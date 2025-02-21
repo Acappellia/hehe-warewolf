@@ -7,6 +7,8 @@ tag @a remove poisoned
 
 execute as @a[tag=witch,gamemode=!spectator] run function hw:private/game/show_blackscreen_init
 
+tellraw @a "check_victory_after_night"
+
 scoreboard players operation #warewolves_alive hw += #warewolves_alive hw
 execute if score #warewolves_alive hw >= #players_alive hw run return run function hw:private/victory/warewolves_alt
 execute if score #warewolves_alive hw matches ..0 run return run function hw:private/victory/civilian

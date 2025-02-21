@@ -14,6 +14,8 @@ execute as @a at @s run playsound item.armor.equip_generic player @s
 
 execute as @a[gamemode=!spectator] run function hw:private/game/show_blackscreen_init
 
+tellraw @a "check_victory_enter_night"
+
 scoreboard players operation #warewolves_alive hw += #warewolves_alive hw
 execute if score #warewolves_alive hw >= #players_alive hw run return run schedule function hw:private/victory/warewolves 12t replace
 
