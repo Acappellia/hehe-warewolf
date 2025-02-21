@@ -28,3 +28,9 @@ title @a title [{"text": "自由活动","color": "yellow"}]
 execute as @a at @s run playsound block.bell.use player @s ~ ~ ~
 
 #refresh structure
+setblock -118 69 112 air
+setblock -118 69 112 blast_furnace[facing=south]
+setblock -118 69 116 air
+setblock -118 69 116 blast_furnace[facing=north]
+
+place template hw:ship -132 65 113
