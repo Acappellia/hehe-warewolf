@@ -21,6 +21,7 @@ execute unless score #current_seat_2 hw matches 0.. run scoreboard players set #
 #1 character assigned, game not start
 
 #10 game preparing time
+
 #99 dummy
 
 #2 game daytime
@@ -31,6 +32,8 @@ execute unless score #current_seat_2 hw matches 0.. run scoreboard players set #
 #7 night time execute
 #8 dawn
 #9 morning meeting
+
+#20 witch night
 
 scoreboard objectives add hw.seat_no dummy
 scoreboard objectives add hw.player_id dummy

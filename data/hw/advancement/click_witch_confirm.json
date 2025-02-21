@@ -1,0 +1,16 @@
+{
+    "criteria": {
+        "click_icon": {
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "interaction",
+                    "nbt": "{Tags:[\"hw_menu_witch_confirm\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "hw:private/menu/witch_click/s1_use"
+    }
+}

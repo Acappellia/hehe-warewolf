@@ -1,0 +1,1 @@
+function hw:private/game/night_final_execute

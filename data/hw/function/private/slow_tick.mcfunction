@@ -23,3 +23,5 @@ execute if score #game_status hw matches 3 run function hw:private/game/meeting_
 execute if score #game_status hw matches 4 unless entity @a[gamemode=!spectator,tag=!voted] run function hw:private/game/enter_vote_execute
 
 execute if score #game_status hw matches 6..7 run function hw:private/game/night_tick
+
+execute if score #game_status hw matches 20..21 run function hw:private/game/night_tick_2

@@ -1,0 +1,1 @@
+execute as @n[type=item_display,tag=witch_seat,distance=..10] run ride @p[distance=..1] mount @s
