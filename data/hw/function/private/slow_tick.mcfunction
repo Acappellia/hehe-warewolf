@@ -24,4 +24,4 @@ execute if score #game_status hw matches 4 unless entity @a[gamemode=!spectator,
 
 execute if score #game_status hw matches 6..7 run function hw:private/game/night_tick
 
-execute if score #game_status hw matches 20..21 run function hw:private/game/night_tick_2
+execute if score #game_status hw matches 20..21 as @a[tag=!witch,gamemode=!spectator] run function hw:private/game/show_blackscreen_loop
