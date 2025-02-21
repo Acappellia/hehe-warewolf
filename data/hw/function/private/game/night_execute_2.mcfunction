@@ -1,4 +1,5 @@
 function hw:private/menu/close_all_menu
+tag @a remove clicked
 
 execute as @a[tag=warewolf,gamemode=!spectator] run function hw:private/game/show_blackscreen_init
 execute as @a[tag=prophet,gamemode=!spectator] run function hw:private/game/show_blackscreen_init

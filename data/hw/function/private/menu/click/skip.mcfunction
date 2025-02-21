@@ -1,5 +1,8 @@
 advancement revoke @s only hw:click_skip
 
+execute if entity @s[tag=clicked] run return -1
+tag @s add clicked
+
 execute if entity @s[tag=voted] run return -1
 execute if entity @s[tag=night_executed] run return -1
 

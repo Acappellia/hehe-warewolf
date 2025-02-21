@@ -1,4 +1,5 @@
 function hw:private/menu/close_all_menu
+tag @a remove clicked
 
 scoreboard players set #witch_night_status hw 1
 

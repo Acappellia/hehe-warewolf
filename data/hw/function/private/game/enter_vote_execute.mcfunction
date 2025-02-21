@@ -11,6 +11,7 @@ scoreboard players reset #max_vote_player hw
 scoreboard players set #max_vote hw 0
 
 function hw:private/menu/close_all_menu
+tag @a remove clicked
 
 execute as @a[gamemode=!spectator] run function hw:private/game/vote_calc
 

@@ -1,5 +1,8 @@
 advancement revoke @s only hw:click_witch_confirm
 
+execute if entity @s[tag=clicked] run return -1
+tag @s add clicked
+
 playsound minecraft:block.beacon.power_select player @s ~ ~ ~ 1 2
 
 title @s times 5 40 5
