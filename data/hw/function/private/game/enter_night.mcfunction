@@ -1,4 +1,5 @@
-kill @a[tag=boom,gamemode=!spectator]
+kill @a[tag=boom]
+gamemode spectator @a[tag=boom]
 tag @a remove boom
 
 bossbar set morning_meeting_counter visible false

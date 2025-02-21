@@ -1,5 +1,7 @@
 kill @a[tag=voted_out]
 kill @a[tag=poisoned]
+gamemode spectator @a[tag=voted_out]
+gamemode spectator @a[tag=poisoned]
 
 scoreboard players reset @a hw.player_vote_get
 tag @a remove voted_out
