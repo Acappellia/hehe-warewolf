@@ -1,7 +1,7 @@
 #change status
 scoreboard players set #game_status hw 99
 
-#execute if score #warewolves_alive hw matches ..0 run return run function hw:private/victory/civilian
+execute if score #warewolves_alive hw matches ..0 run return run function hw:private/victory/civilian
 
 setblock -3 45 -21 spruce_trapdoor[facing=east,half=top,open=false]
 
