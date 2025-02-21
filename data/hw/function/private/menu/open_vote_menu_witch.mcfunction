@@ -4,5 +4,3 @@ execute as @n[type=item_display,tag=new_center,distance=..3] at @s rotated as @n
 execute at @n[type=item_display,tag=new_center,distance=..3] run function hw:private/menu/summon_menu
 
 tag @n[type=item_display,tag=new_center,distance=..3] remove new_center
-
-tellraw @a "witch_menu_opened"
