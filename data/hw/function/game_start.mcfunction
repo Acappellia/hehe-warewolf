@@ -2,6 +2,7 @@ execute if score #game_status hw matches 0 if score #setting_wolf_count hw match
 execute if score #game_status hw matches 0 if score #setting_wolf_count hw matches 2 run function hw:give_character/2wolves
 execute if score #game_status hw matches 0 if score #setting_wolf_count hw matches 3 run function hw:give_character/3wolves
 execute if score #game_status hw matches 0 if score #setting_wolf_count hw matches 4 run function hw:give_character/4wolves
+execute if score #game_status hw matches 0 unless score #setting_wolf_count hw matches 1..4 run function hw:give_character/1wolf
 
 gamemode adventure @a[gamemode=survival]
 
