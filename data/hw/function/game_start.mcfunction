@@ -1,3 +1,5 @@
+gamemode adventure @a[gamemode=survival]
+
 execute as @a at @s run playsound item.goat_horn.sound.3 player @s ~ ~ ~ 1 1
 
 #remove tags
@@ -81,5 +83,9 @@ data modify storage hw:players names.11 set from block 0 -64 0 Items[{Slot:11b}]
 data modify storage hw:players names.12 set from block 0 -64 0 Items[{Slot:12b}].components."minecraft:profile".name
 
 
-
 #refresh structure
+
+
+#refresh witch status
+scoreboard players set #witch_has_antidode hw 1
+scoreboard players set #witch_has_poison hw 1
