@@ -9,6 +9,4 @@ playsound entity.lightning_bolt.impact player @a ~ ~ ~ 1 1
 title @a times 5 40 5
 title @a subtitle "黑夜即将到来……"
 title @a title [{"selector":"@s","color": "red"},{"text":" 自爆了","color": "dark_red"}]
-tag @s add boom
 
-schedule function hw:private/game/enter_night 40t replace

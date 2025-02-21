@@ -10,10 +10,10 @@ spreadplayers 0 -10 10 60 under 82 false @a
 #change status
 scoreboard players set #game_status hw 2
 
-scoreboard players set #day_counter hw 120
-bossbar set day_counter max 120
-bossbar set day_counter value 120
-bossbar set day_counter name "- 白天 - 剩余 2:00"
+scoreboard players set #day_counter hw 150
+bossbar set day_counter max 150
+bossbar set day_counter value 150
+bossbar set day_counter name "- 白天 - 剩余 2:30"
 
 bossbar set morning_meeting_counter visible false
 bossbar set day_counter visible true

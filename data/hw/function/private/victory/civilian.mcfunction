@@ -13,7 +13,7 @@ bossbar set lighthouse visible false
 
 kill @e[type=marker,tag=loc_record]
 
-effect clear @a weakness
+#effect clear @a weakness
 effect clear @a darkness
 execute as @a run attribute @s block_interaction_range base reset
 

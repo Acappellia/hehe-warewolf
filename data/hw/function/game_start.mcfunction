@@ -12,7 +12,7 @@ tellraw @a [{"text": "[","color": "dark_gray"},{"text": "方块狼人杀","color
 scoreboard players set #game_status hw 10
 
 scoreboard players set #lighthouse_progress hw 0
-bossbar set lighthouse max 32
+bossbar set lighthouse max 24
 bossbar set lighthouse value 0
 bossbar set lighthouse name "灯塔修复中……"
 bossbar set lighthouse visible true

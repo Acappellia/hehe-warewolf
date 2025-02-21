@@ -1,3 +1,6 @@
+kill @a[tag=boom,gamemode=!spectator]
+tag @a remove boom
+
 bossbar set morning_meeting_counter visible false
 bossbar set day_counter visible false
 bossbar set meeting_counter visible false

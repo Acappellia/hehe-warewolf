@@ -1,7 +1,7 @@
 scoreboard players set #game_status hw 8
 
 #give effect
-effect clear @a weakness
+#effect clear @a weakness
 effect clear @a darkness
 
 #tp to seat

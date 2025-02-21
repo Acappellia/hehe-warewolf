@@ -10,7 +10,7 @@ scoreboard players operation #lighthouse_progress hw += #iron_ingot_count hw
 execute store result bossbar lighthouse value run scoreboard players get #lighthouse_progress hw
 playsound item.armor.equip_chain player @a ~ ~ ~ 1 1
 
-execute if score #lighthouse_progress hw matches ..31 run return -1
+execute if score #lighthouse_progress hw matches ..23 run return -1
 
 scoreboard players set #lighthouse_finished hw 1
 bossbar set lighthouse name "灯塔已修复"
