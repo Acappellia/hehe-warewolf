@@ -1,10 +1,11 @@
 #change status
 scoreboard players set #game_status hw 99
 
-tellraw @a "check_victory_after_vote"
-
 execute store result score #players_alive hw if entity @a[gamemode=!spectator]
 execute store result score #warewolves_alive hw if entity @a[gamemode=!spectator,tag=warewolf]
+
+tellraw @a ["check_victory_after_vote, wolf-",{"score": {"name": "#warewolves_alive","objective": "hw"}},", all-",{"score": {"name": "#players_alive","objective": "hw"}}]
+
 execute if score #warewolves_alive hw matches ..0 run return run function hw:private/victory/civilian
 
 setblock -3 45 -21 spruce_trapdoor[facing=east,half=top,open=false]
