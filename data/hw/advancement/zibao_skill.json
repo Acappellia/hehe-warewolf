@@ -6,7 +6,7 @@
                 "item": {
                     "items": "amethyst_shard",
                     "predicates": {
-                        "custom_data": "{hw_vanish:1b}"
+                        "custom_data": "{hw_zibao:1b}"
                     }
                 }
             }
