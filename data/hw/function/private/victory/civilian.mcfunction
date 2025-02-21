@@ -32,4 +32,4 @@ title @a title [{"text": "村民 胜利","color": "yellow"}]
 #effect
 effect give @a instant_health 1 9 true
 
-schedule function hw:game_reset 100t replace
+schedule function hw:game_reset 60t replace

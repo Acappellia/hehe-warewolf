@@ -31,4 +31,4 @@ title @a title [{"text": "游戏中止","color": "gray"}]
 #effect
 effect give @a instant_health 1 9 true
 
-schedule function hw:game_reset 100t replace
+schedule function hw:game_reset 60t replace
