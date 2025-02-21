@@ -12,7 +12,7 @@ execute as @a[tag=witch,gamemode=!spectator] run function hw:private/game/show_b
 execute store result score #players_alive hw if entity @a[gamemode=!spectator]
 execute store result score #warewolves_alive hw if entity @a[gamemode=!spectator,tag=warewolf]
 
-tellraw @a ["check_victory_after_night, wolf-",{"score": {"name": "#warewolves_alive","objective": "hw"}},", all-",{"score": {"name": "#players_alive","objective": "hw"}}]
+#tellraw @a ["check_victory_after_night, wolf-",{"score": {"name": "#warewolves_alive","objective": "hw"}},", all-",{"score": {"name": "#players_alive","objective": "hw"}}]
 
 scoreboard players operation #warewolves_alive hw += #warewolves_alive hw
 execute if score #warewolves_alive hw >= #players_alive hw run return run function hw:private/victory/warewolves_alt

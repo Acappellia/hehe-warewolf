@@ -1,10 +1,10 @@
 #change status
 scoreboard players set #game_status hw 3
 
-scoreboard players set #meeting_counter hw 480
-bossbar set meeting_counter max 480
-bossbar set meeting_counter value 480
-bossbar set meeting_counter name "- 会议 - 剩余 8:00"
+scoreboard players set #meeting_counter hw 300
+bossbar set meeting_counter max 300
+bossbar set meeting_counter value 300
+bossbar set meeting_counter name "- 会议 - 剩余 5:00"
 
 bossbar set day_counter visible false
 bossbar set meeting_counter visible true

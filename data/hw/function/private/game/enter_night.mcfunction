@@ -4,7 +4,7 @@ tag @a remove boom
 
 execute store result score #players_alive hw if entity @a[gamemode=!spectator]
 execute store result score #warewolves_alive hw if entity @a[gamemode=!spectator,tag=warewolf]
-tellraw @a ["check_victory_enter_night, wolf-",{"score": {"name": "#warewolves_alive","objective": "hw"}},", all-",{"score": {"name": "#players_alive","objective": "hw"}}]
+#tellraw @a ["check_victory_enter_night, wolf-",{"score": {"name": "#warewolves_alive","objective": "hw"}},", all-",{"score": {"name": "#players_alive","objective": "hw"}}]
 
 execute if score #warewolves_alive hw matches ..0 run return run function hw:private/victory/civilian
 
