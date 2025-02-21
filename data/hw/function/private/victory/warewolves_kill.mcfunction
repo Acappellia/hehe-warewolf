@@ -27,7 +27,9 @@ scoreboard players set #max_vote hw 0
 
 title @a times 0 60 20
 title @a subtitle ""
-title @a title [{"text": "狼人阵营 胜利","color": "red"}]
+title @a title [{"text": "狼人 胜利","color": "red"}]
 
 #effect
 effect give @a instant_health 1 9 true
+
+schedule function hw:game_reset 100t replace

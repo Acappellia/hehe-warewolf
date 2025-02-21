@@ -1,3 +1,8 @@
+execute if score #game_status hw matches 0 if score #setting_wolf_count hw matches 1 run function hw:give_character/1wolf
+execute if score #game_status hw matches 0 if score #setting_wolf_count hw matches 2 run function hw:give_character/2wolves
+execute if score #game_status hw matches 0 if score #setting_wolf_count hw matches 3 run function hw:give_character/3wolves
+execute if score #game_status hw matches 0 if score #setting_wolf_count hw matches 4 run function hw:give_character/4wolves
+
 gamemode adventure @a[gamemode=survival]
 
 execute as @a at @s run playsound item.goat_horn.sound.3 player @s ~ ~ ~ 1 1
